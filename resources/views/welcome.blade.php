@@ -39,6 +39,7 @@
                 </div>
 
                 <h1 style="color: red;">Teste de alteração com deploy automático.</h1>
+                <h1 style="color: blue;">Teste de alteração com deploy automático.</h1>
                 <hr>
 
                 <div class="mt-16">
