@@ -17,7 +17,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
-        REMOTE_HOST: "ec2-54-209-28-196.compute-1.amazonaws.com"
+        REMOTE_HOST: "camilymilsoni.ddns.net"
         REMOTE_USER: "ubuntu"
         TARGET: "/var/www/html/laravel/"
         EXCLUDE: "/dist/, /vendor/, /node_modules/, **.env"
