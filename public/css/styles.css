@@ -134,7 +134,7 @@ header {
 
 /* Event create page */
 #event-create-container {
-    padding: 30px;
+    padding: 30px
 }
 
 #event-create-container label {
@@ -193,7 +193,7 @@ header {
     display: flex;
 }
 
-/* Footer */
+/* footer */
 footer {
     text-align: center;
     background-color: #353E48;
