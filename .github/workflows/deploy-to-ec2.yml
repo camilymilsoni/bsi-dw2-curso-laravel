@@ -20,4 +20,4 @@ jobs:
         REMOTE_HOST: "camilymilsoni.ddns.net"
         REMOTE_USER: "ubuntu"
         TARGET: "/var/www/html/laravel/"
-        EXCLUDE: "/dist/, /vendor/, /node_modules/, /laravel/public/img/events, **.env"
+        EXCLUDE: "/dist/, /vendor/, /node_modules/, /public/img/events, **.env"
