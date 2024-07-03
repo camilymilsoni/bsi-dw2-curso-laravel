@@ -11,10 +11,25 @@ jobs:
     - name: Checkout the files
       uses: actions/checkout@v4
 
+    - name: Update permissions on server
+      uses: appleboy/ssh-action@master
+      with:
+        host: "camilymilsoni.ddns.net"
+        username: "ubuntu"
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd /var/www
+          sudo chown -R $USER:www-data html
+          cd /var/www/html/laravel
+          sudo chown -R $USER:www-data storage
+          sudo chown -R $USER:www-data bootstrap/cache
+          sudo chmod -R 775 storage
+          sudo chmod -R 775 bootstrap/cache
+
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
         REMOTE_HOST: "camilymilsoni.ddns.net"
